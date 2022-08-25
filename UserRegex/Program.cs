@@ -14,6 +14,14 @@ namespace UserRegex
             EmailValidation();
             MobileValidation();
             PasswordRule();
+           
+            SampleEmails sampleEmails = new SampleEmails();
+            if (sampleEmails.ValidateEmail("abc@gmail.com.com"))
+            {
+                Console.WriteLine("The Sample Email is Valid");
+            }
+            else
+                Console.WriteLine("The Sample Email is Invalid");
         }
         public static void FirstNameVal()
         {
@@ -69,6 +77,15 @@ namespace UserRegex
             string password = Console.ReadLine();
             bool validate = rg.IsMatch(password);
             Console.WriteLine(validate);
+        }
+        public class SampleEmails
+        {
+            public static string REGEX_SampleEmails = "^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$";
+
+            public bool ValidateEmail(string email)
+            {
+                return Regex.IsMatch(email, REGEX_SampleEmails);
+            }
         }
     }
 }
