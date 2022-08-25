@@ -8,7 +8,7 @@ namespace UserRegex
         public static string REGEX_PATTERN = "^[A-Z]{1}[a-zA-Z]{2,}";
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To User Registration Regex Program");
+            Console.WriteLine("Welcome To User Registration Regex Program!");
             FirstNameVal();
             LastNameVal();
             EmailValidation();
@@ -63,8 +63,7 @@ namespace UserRegex
         }
         public static void PasswordRule()
         {
-         // string PasswordPattern = "^[a-zA-Z0-9]{8,}$";//Password Rule 1
-            string PasswordPattern = "^(?=.*[A-Z])[a-zA-Z0-9].{8,}$";
+            string PasswordPattern = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9].{8,}$";
             Regex rg = new Regex(PasswordPattern);
             Console.Write("Enter Password: ");
             string password = Console.ReadLine();
@@ -74,6 +73,5 @@ namespace UserRegex
             else
                 Console.WriteLine("Invalid password..");
         }
-
     }
 }
