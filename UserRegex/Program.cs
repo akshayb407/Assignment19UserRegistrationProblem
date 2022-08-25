@@ -6,11 +6,15 @@ namespace UserRegex
     public class Program
     {
         public static string REGEX_PATTERN = "^[A-Z]{1}[a-zA-Z]{2,}";
+       
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome_To_UserRegistration_Regex");
             FirstNameVal();
+            LastNameVal();
+           
         }
+
         public static void FirstNameVal()
         {
             Regex rg = new Regex(REGEX_PATTERN);
@@ -34,8 +38,7 @@ namespace UserRegex
             else
                 Console.WriteLine("Invalid LastName");
         }
-
-
+       
 
     }
 }
