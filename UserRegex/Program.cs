@@ -6,13 +6,21 @@ namespace UserRegex
     public class Program
     {
         public static string REGEX_PATTERN = "^[A-Z]{1}[a-zA-Z]{2,}";
+<<<<<<< HEAD
         public static string EMAIL_PATTERN = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*(\\@)[a-zA-Z0-9]+(\\.)[a-z]{2,3}[.(a-z)]*$";
+=======
+       
+>>>>>>> UC2_ValidLast_Name
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome_To_UserRegistration_Regex");
             FirstNameVal();
             LastNameVal();
+<<<<<<< HEAD
             EmailValidation();
+=======
+           
+>>>>>>> UC2_ValidLast_Name
         }
 
         public static void FirstNameVal()
@@ -38,6 +46,7 @@ namespace UserRegex
             else
                 Console.WriteLine("Invalid LastName");
         }
+<<<<<<< HEAD
         public static void EmailValidation()
         {
             Regex rg = new Regex(EMAIL_PATTERN);
@@ -49,5 +58,9 @@ namespace UserRegex
             else
                 Console.WriteLine("Invalid E-mail.");
         }
+=======
+       
+
+>>>>>>> UC2_ValidLast_Name
     }
 }
